@@ -8,7 +8,11 @@ _Udacity Project_
 Describe what your project is about and what it does
 
 ### Files used
-Include the files used
+* **bikeshare.py** _(Main Python program file)_
+* raw data files _(temporarily excluded from repository)_:
+  * chicago.csv
+  * new_york_city.csv
+  * washington.csv
 
 ### Credits
 * This project is forked from [Udacity](https://github.com/udacity/pdsnd_github)
