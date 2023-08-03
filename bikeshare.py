@@ -7,7 +7,18 @@ CITY_DATA = {'chicago': 'chicago.csv',
 
 
 def get_user_data(valid_items_list, prompt, error_msg):
-    """Used to simplify the get_filters() function"""
+    """
+    User input data validation function
+
+    Args:
+        (list) valid_items_list - the valid input to allow the program to
+        validate whatever the user input in the terminal
+        (str) prompt - the message to be displayed in the terminal
+        (str) error_msg - the message to be displayed in case the user input
+        is incorrect
+    Returns:
+        (str) - any validated string in lowercase
+    """
     correct_input = False
     while not correct_input:
         user_input = (input(prompt))
