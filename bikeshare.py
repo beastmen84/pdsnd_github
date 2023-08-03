@@ -10,7 +10,18 @@ statistics_runtime_msg = "This took %s seconds."
 
 
 def get_user_data(valid_items_list, prompt, error_msg):
-    """Used to simplify the get_filters() function"""
+    """
+    User input data validation function
+
+    Args:
+        (list) valid_items_list - the valid input to allow the program to
+        validate whatever the user input in the terminal
+        (str) prompt - the message to be displayed in the terminal
+        (str) error_msg - the message to be displayed in case the user input
+        is incorrect
+    Returns:
+        (str) - any validated string in lowercase
+    """
     correct_input = False
     while not correct_input:
         user_input = (input(prompt))
@@ -57,8 +68,9 @@ def get_filters():
 
 def load_data(city, month, day):
     """
-    Loads data for the specified city
-    and filters by month and day if applicable.
+    Loads data for the specified city.
+    It also filters by month, day and hour
+    (needed for later use in time_stats function).
 
     Args:
         (str) city - name of the city to analyze
