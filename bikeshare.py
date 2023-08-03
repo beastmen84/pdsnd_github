@@ -6,6 +6,7 @@ CITY_DATA = {'chicago': 'chicago.csv',
              'new york city': 'new_york_city.csv',
              'washington': 'washington.csv'}
 error_message = '{} is not a valid input. Please try again.\n'
+statistics_runtime_msg = "This took %s seconds."
 
 
 def get_user_data(valid_items_list, prompt, error_msg):
@@ -105,7 +106,7 @@ def time_stats(df, month, day):
     print('The most common start hour is {}\n'
           .format(df['hour'].mode()[0]))
 
-    print("This took %s seconds." % (time.time() - start_time))
+    print(statistics_runtime_msg % (time.time() - start_time))
     print('-'*40)
 
 
@@ -128,7 +129,7 @@ def station_stats(df):
     print('The most frequent combination of start station and end station '
           'trip is from {} to {}\n'.format(station_combo[0], station_combo[1]))
 
-    print("This took %s seconds." % (time.time() - start_time))
+    print(statistics_runtime_msg % (time.time() - start_time))
     print('-'*40)
 
 
@@ -144,7 +145,7 @@ def trip_duration_stats(df):
     # display mean travel time
     print('The mean travel time is {}\n'.format(df['Trip Duration'].mean()))
 
-    print("This took %s seconds." % (time.time() - start_time))
+    print(statistics_runtime_msg % (time.time() - start_time))
     print('-'*40)
 
 
@@ -177,7 +178,7 @@ def user_stats(df, city):
     except KeyError:
         print('Birth data for {} city is NOT available.\n'.format(city))
 
-    print("This took %s seconds." % (time.time() - start_time))
+    print(statistics_runtime_msg % (time.time() - start_time))
     print('-'*40)
 
 
