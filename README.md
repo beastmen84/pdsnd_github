@@ -5,7 +5,13 @@ _Udacity Project_
 03/08/2023
 
 ### Description
-Describe what your project is about and what it does
+This program analyzes public data retrieved from three different bikeshare
+companies based in three cities: Chicago, New York City and Washington.
+
+Based on user input the program displays statistical information related to 
+time, stations, trip duration and users.
+
+Additionally, if the user requests it, the program displays lines of raw data.
 
 ### Files used
 * **bikeshare.py** _(Main Python program file)_
