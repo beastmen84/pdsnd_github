@@ -1,9 +1,11 @@
 import time
 import pandas as pd
 
+# GLOBAL VARIABLES
 CITY_DATA = {'chicago': 'chicago.csv',
              'new york city': 'new_york_city.csv',
              'washington': 'washington.csv'}
+error_message = '{} is not a valid input. Please try again.\n'
 
 
 def get_user_data(valid_items_list, prompt, error_msg):
@@ -29,7 +31,6 @@ def get_filters():
         or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!\n')
-    error_message = '{} is not a valid input. Please try again.\n'
     # Get user input for the city
     city_prompt = ('Enter the city you would like to analyze data for;\n'
                    'VALID INPUTS ARE: Chicago, New York City, Washington\n')
@@ -187,7 +188,6 @@ def display_raw_data(df):
     display_lines = True
     while display_lines:
         print('\n', df.iloc[idx:idx + 5, :].to_string())
-        error_message = '{} is not a valid input. Please try again.\n'
         extra_raw_data_prompt = ('\nWould you like to display 5 more lines?'
                                  '\nVALID INPUTS ARE: Yes, No\n')
         valid_answers = ['yes', 'no']
@@ -202,7 +202,6 @@ def display_raw_data(df):
 
 def ask_to_display_data(df):
     """Ask the user whether he would like to display raw data or not."""
-    error_message = '{} is not a valid input. Please try again.\n'
     display_raw_data_prompt = ('\nWould you like to display 5 lines of raw '
                                'data?\nVALID INPUTS ARE: Yes, No\n')
     valid_answers = ['yes', 'no']
